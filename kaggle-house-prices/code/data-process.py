@@ -24,3 +24,16 @@ print("===")
 numerical_index = df.dtypes[df.dtypes != 'object'].index
 print(df.dtypes)
 print(numerical_index)
+
+
+def get_net(feature_num):
+    net = nn.Linear(feature_num, 1)
+    for param in net.parameters():
+        nn.init.normal_(param, mean=0, std=0.01)
+    return net
+
+
+
+
+
+
